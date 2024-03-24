@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SRTF Scheduling Algorithm</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sjf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1 style="text-align: center;">SJF Scheduling Algorithm</h1>
+            <p style="text-align: center;">Shortest Job First (SJF) is an algorithm in which the process having the
+                smallest execution time is chosen for the next execution. This scheduling method can be preemptive or
+                non-preemptive.<br> It significantly reduces the average waiting time for other processes awaiting
+                execution. The full form of SJF is Shortest Job First</p>
+            <p style="margin: 0.5em 0;"> - This page demonstrates the Shortest Job First - Premptive (SJF) scheduling
+                algorithm using JavaScript.</p>
+            <p style="margin: 0.5em 0;"> - Do's and Dont's</p>
+            <ul>
+                <li>Do not enter special characters or symbols</li>
+                <li>Enter required input specified</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <form id="sjf-form">
+                <label for="process-count">Number of Processes:</label>
+                <input type="number" class="inout_style" id="process-count" name="process-count" min="1" required>
+                <input type="submit" class="inout_style" value="Generate Fields">
+            </form>
+            <br>
+            <h3>Process Information</h3>
+            <table id="processes">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <br>
+            <button style="text-align: right;" class="inout_style" id="calculate-btn">Schedule</button>
+            <h2 id="interrupt" style="text-align: center;">
+                </h3>
+
+                <br>
+                <br>
+                <hr>
+                <h3>Gantt Chart</h3>
+                <table id="gantt-chart" style="border-collapse: collapse;"">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h3>Results Table</h3>
+        <table id=" result-table" style="border-collapse: collapse;"">
+          <thead>
+              <tr>
+                  <th>Process</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Completion Time</th>
+                  <th>Turnaround Time</th>
+                  <th>Waiting Time</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+              <tr>
+                  <td colspan=" 5">Average Waiting Time:</td>
+                    <td id="avg-wt"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Average Turnaround Time:</td>
+                        <td id="avg-tat"></td>
+                    </tr>
+                    </tfoot>
+                </table>
+        </div>
+        <script src="srtf.js"></script>
+    </main>
+</body>
+
+</html>

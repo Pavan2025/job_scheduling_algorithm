@@ -1,0 +1,143 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .inout_style {
+      border: 2px solid black;
+      border-radius: 4px;
+      font-size: 13px;
+      padding: 6.5px 16px;
+  }
+
+  /* Set font family and size for the entire page */
+  
+  /* Style the main container */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the page title */
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0;
+  }
+  
+  /* Style the paragraph text */
+  p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+  
+  /* Style the form */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the form label */
+  label {
+    margin-right: 10px;
+  }
+  
+  /* Style the form input */
+  input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;   
+
+  }
+  
+  /* Style the form submit button */
+  input[type="submit"] {
+    background: linear-gradient(to bottom, #4a0080, #8a2be2);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Add larger box shadow on hover */ 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  /* Style the table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #9400d3;
+    color: #fff;
+  }
+  
+  /* Style the table cells */
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  /* Style the schedule button */
+  #calculate-btn {
+    background: linear-gradient(to bottom, #4a0080, #8a2be2);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Add larger box shadow on hover */
+    font-family: 'Poppins', sans-serif;   
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style the interrupt message */
+  #interrupt {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the Gantt chart */
+  #gantt-chart {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the results table */
+  #result-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the results table header */
+  #result-table th {
+    background-color: #9400d3;
+    color: #fff;
+  }
+  
+  /* Style the results table footer */
+  #result-table tfoot td {
+    font-weight: bold;
+  }
+  

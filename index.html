@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Scheduling Algorithms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Job Scheduling Algorithms</a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#main-section" onclick="smoothScroll(event)">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-section">
+            <div class="section">
+                <h2>What is scheduling?</h2>
+                <p>Scheduling algorithms are an important part of operating systems that manage the allocation of system
+                    resources, such as CPU time, memory, and input/output (I/O) devices, to multiple tasks or processes.
+                    <br>
+                    Scheduling algorithms determine which tasks or processes to execute and in what order, based on
+                    various criteria such as priority, resource requirements, and deadlines
+                </p>
+                <p>
+                    One can know more details about this on <a href="about.html">About</a> section!
+                </p>
+            </div>
+            <div class="section">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="#FCFS" onclick="smoothScroll(event)">First Come First Serve (FCFS)</a></li>
+                    <li>
+                        <a href="#SJF" onclick="smoothScroll(event)">Shortest Job First (SJF)</a>
+                        <ul>
+                            <li>
+                                SJF with no preemption
+                            </li>
+                            <li>
+                                SJF with preemption
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#RR" onclick="smoothScroll(event)">Round Robin Scheduling</a></li>
+                    <li><a href="#MLQ" onclick="smoothScroll(event)">Multi Level Queue</a></li>
+                    <li><a href="#MLFQ" onclick="smoothScroll(event)">Multi Level Feedback Queue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Algo">
+            <div class="FCFS">
+                <h1>FIRST COME FIRST SERVE SCHEDULING (FCFS)</h1>
+                <p>
+                    FCFS (First-Come, First-Serve) is a scheduling algorithm used in operating systems to schedule the
+                    order
+                    of execution of processes. As its name suggests, it is based on the principle of servicing the
+                    requests
+                    in the order in which they arrive.
+                </p>
+                <p>
+                    In FCFS scheduling, the operating system executes the processes in the order in which they enter the
+                    ready queue. The first process to arrive in the queue is the first to be serviced, and the next
+                    process
+                    is serviced only when the previous process completes its execution.
+                </p>
+                <p>
+                    FCFS scheduling is simple and easy to implement, but it may not always be the most efficient
+                    scheduling
+                    algorithm. The main disadvantage of this algorithm is that it does not take into account the varying
+                    execution times of different processes. If a process with a long execution time arrives first, it
+                    will
+                    hold up the CPU for a long time, leading to longer waiting times for other processes in the queue.
+                </p>
+                <p>
+                    Despite its drawbacks, FCFS scheduling is still used in many operating systems, particularly for
+                    batch
+                    processing systems, where the arrival times of processes are relatively predictable and the
+                    execution
+                    times are roughly equal.
+                </p>
+                <a href="fcfs.html">
+                    <button class="try-it-button">Try it ➚</button>
+                </a>
+            </div>
+            <div class="SJF">
+                <h1>SHORTEST JOB FIRST (SJF)</h1>
+                <p>
+                    SJF (Shortest Job First) is a scheduling algorithm used in operating systems to schedule the order
+                    of execution of processes. As its name suggests, it is based on the principle of selecting the
+                    process with the shortest execution time first for scheduling.
+
+                    In SJF scheduling, the operating system selects the process with the shortest expected execution
+                    time from the ready queue and schedules it for execution. If there are multiple processes with the
+                    same shortest expected execution time, the operating system can use either preemptive or
+                    non-preemptive SJF scheduling.
+                </p>
+                <h3>SJF without preemption</h3>
+                <p>
+                    In non-preemptive SJF scheduling, the currently executing process will continue to run until it
+                    completes its execution, even if a new process with a shorter expected execution time arrives in the
+                    ready queue.
+                </p>
+                <h3>SJF with preemption</h3>
+                <p>
+                    In preemptive SJF scheduling, if a new process arrives in the ready queue with a shorter expected
+                    execution time than the currently executing process, the operating system will preempt the currently
+                    executing process and schedule the new process for execution.
+                </p>
+                <h3>Benefits</h3>
+                <p>
+                    SJF scheduling can minimize the average waiting time and turnaround time of processes. However, it
+                    requires accurate knowledge of the expected execution time of each process, which is often difficult
+                    to predict. Moreover, if a long-running process arrives first, shorter processes may have to wait a
+                    long time, leading to longer waiting times for other processes in the queue.
+
+                    Overall, SJF scheduling is suitable for environments where the expected execution times of processes
+                    are known and relatively stable, such as in batch processing systems or real-time systems with
+                    deterministic behavior.
+                </p>
+                <a href="http://example.com">
+                    <button class="try-it-button">Try it ➚</button>
+                </a>
+            </div>
+            <div class="RR">
+                <h1>ROUND-ROBIN SCHEDULING </h1>
+                <p>
+                    Round Robin is a scheduling algorithm used in operating systems to schedule the order of execution
+                    of
+                    processes. It is a pre-emptive algorithm that is based on the principle of servicing each process in
+                    turn for a fixed time slice, called a time quantum.
+                </p>
+                <p>
+                    In Round Robin scheduling, the operating system assigns a fixed time quantum to each process in the
+                    ready queue, and the processes are executed in a circular manner, in the order they are received.
+                    When a
+                    process is scheduled for execution, it is allowed to run for a fixed time quantum, and if it does
+                    not
+                    complete its execution within the time quantum, it is preempted and added back to the end of the
+                    ready
+                    queue, and the next process in the queue is scheduled for execution.
+                </p>
+                <p>
+                    The time quantum is typically set to a small value, such as 10-100 milliseconds, to ensure fairness
+                    and
+                    responsiveness of the system. The Round Robin scheduling algorithm ensures that all processes get a
+                    fair
+                    share of the CPU time and that no single process monopolizes the CPU for an extended period.
+                </p>
+                <p>
+                    However, Round Robin scheduling may not be optimal for processes with a short execution time, as it
+                    incurs significant overhead in the context switching between processes. Moreover, if the time
+                    quantum is
+                    set too large, the system may become unresponsive to interactive processes, leading to poor user
+                    experience.
+                </p>
+                <p>
+                    Overall, Round Robin scheduling is suitable for environments where multiple processes require equal
+                    access to the CPU and where responsiveness is a priority, such as in interactive systems or network
+                    servers.
+                </p>
+                <a href="rorb.html">
+                    <button class="try-it-button">Try it ➚</button>
+                </a>
+            </div>
+            <div class="MLQ">
+                <h1>MULTI LEVEL QUEUE (MLQ)</h1>
+                <p>
+                    Multi-Level Queue (MLQ) is a scheduling algorithm used in operating systems to schedule the order of
+                    execution of processes. It is based on the principle of dividing the ready queue into multiple
+                    separate queues, each with its own scheduling algorithm and priority level.
+                </p>
+                <p>
+                    In a Multi-Level Queue system, processes are first classified into different categories based on
+                    their properties, such as their type, priority, or resource requirements. Then, each category is
+                    assigned to a separate queue with its own scheduling algorithm, time quantum, and priority level.
+                </p>
+                <p>
+                    For example, a Multi-Level Queue system may have separate queues for foreground and background
+                    processes, with foreground processes having higher priority and shorter time quantum than background
+                    processes. Similarly, a real-time system may have separate queues for high-priority and low-priority
+                    tasks, with the former receiving preferential treatment over the latter.
+                </p>
+                <p>
+                    The Multi-Level Queue system ensures that each category of processes is treated differently
+                    according to its importance and requirements, and that the CPU time is allocated in a fair and
+                    efficient manner. However, it requires careful design and management of the queues and their
+                    parameters, such as the scheduling policies, time quantum, and priority levels.
+                </p>
+                <p>
+                    OOverall, Multi-Level Queue scheduling is suitable for environments where processes have different
+                    priorities and requirements, and where fairness, responsiveness, and efficiency are important
+                    considerations.
+                </p>
+                <a href="http://example.com">
+                    <button class="try-it-button">Try it ➚</button>
+                </a>
+            </div>
+            <div class="MLFQ">
+                <h1>MULTI LEVEL FEEDBACK QUEUE (MLFQ)</h1>
+                <p>
+                    Multi-Level Feedback Queue (MLFQ) is a scheduling algorithm used in operating systems to schedule
+                    the order of execution of processes. It is a variant of the Multi-Level Queue algorithm that
+                    incorporates the concept of dynamic priority adjustment based on the behavior of the processes.
+                </p>
+                <p>
+                    In a Multi-Level Feedback Queue system, processes are assigned to separate queues based on their
+                    priority and the amount of CPU time they have already consumed. Each queue has its own scheduling
+                    algorithm and priority level, with higher priority levels indicating higher urgency.
+                </p>
+                <p>
+                    Processes initially enter the highest-priority queue and are executed for a fixed time quantum. If a
+                    process completes its execution within the time quantum, it is removed from the queue. If it does
+                    not complete its execution, it is demoted to a lower-priority queue, where it competes with other
+                    processes with similar priority.
+                </p>
+                <p>
+                    The demotion process allows the Multi-Level Feedback Queue system to adjust the priority of
+                    processes dynamically based on their behavior. If a process has been consuming too much CPU time, it
+                    will be demoted to a lower-priority queue, allowing other processes to get a chance to execute.
+                </p>
+                <p>
+                    Similarly, if a process has been waiting in a lower-priority queue for too long, it will be promoted
+                    to a higher-priority queue, allowing it to get a chance to execute. This dynamic adjustment of
+                    priority levels based on the behavior of the processes improves the fairness, responsiveness, and
+                    efficiency of the system.
+                </p>
+                <p>
+                    Overall, Multi-Level Feedback Queue scheduling is suitable for environments where processes have
+                    varying resource requirements and behavior patterns, and where fairness, responsiveness, and
+                    efficiency are important considerations.
+                </p>
+                <a href="http://example.com">
+                    <button class="try-it-button">Try it ➚</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>SRM 2025</p>
+        <p>&copy; OS Project.</p>
+    </footer>
+
+
+    <script>
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetClass = event.target.getAttribute("href").substring(1);
+            const targetElement = document.querySelector("." + targetClass);
+            const topOffset = targetElement.offsetTop;
+            window.scrollTo({
+                top: topOffset,
+                behavior: "smooth"
+            });
+        }
+    </script>

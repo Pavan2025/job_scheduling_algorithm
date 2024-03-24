@@ -1,0 +1,253 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: black;
+}
+
+.header {
+    background-color: #9400d3;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.header .menu-icon {
+	display: none;
+}
+
+.header ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.header ul li {
+	margin-left: 20px;
+}
+
+.header ul li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.header ul li a:hover {
+	background-color: #9400d3;
+}
+
+.logo a {
+	color: #fff;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.options {
+	display: flex;
+	align-items: center;
+}
+
+.options i {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+	.header ul {
+		display: none;
+	}
+	.header .menu-icon {
+		display: block;
+		cursor: pointer;
+	}
+	.header .menu-icon i {
+		font-size: 24px;
+	}
+	.header .menu-icon.active i::before {
+		content: '\f00d';
+	}
+	.header .menu-icon i::before {
+		content: '\f0c9';
+		font-family: FontAwesome;
+	}
+	.header .menu-btn:checked ~ .menu {
+		max-height: 200px;
+	}
+	.header .menu-btn:checked ~ .menu-icon i {
+		color: #fff;
+	}
+	.header .menu-btn:checked ~ .menu-icon i::before {
+		content: '\f00d';
+	}
+	.header .menu-btn {
+		display: none;
+	}
+	.header .menu {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
+	.header .menu li {
+		display: block;
+		margin-left: 0;
+	}
+	.header .menu li a {
+		display: block;
+		padding: 10px
+    }
+}
+.footer {
+    background-color: #9400d3;
+color: #fff;
+text-align: center;
+padding: 20px;
+}
+
+
+.footer p {
+margin: 0;
+}
+
+a {
+	text-decoration: none;
+  }
+  
+ /* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+font-family: 'Poppins', sans-serif;
+}
+
+.logo a {
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+}
+
+.header ul li a {
+font-family: 'Poppins', sans-serif;
+font-weight: 500;
+}
+
+
+
+.main-section {
+	padding: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.section {
+	flex-basis: 60%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+ul {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.FCFS
+{
+	flex-basis: 30%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+.SJF
+{
+	flex-basis: 30%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+.RR
+{
+	flex-basis: 30%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+.MLQ
+{
+	flex-basis: 30%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+.MLFQ
+{
+	flex-basis: 30%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+}
+
+.Algo{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.try-it-button {
+	background: linear-gradient(to bottom, #8a2be2, #4a0080);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 1% 1.5%;
+	font-size: 18px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif; /* Use Open Sans font */
+	text-transform: uppercase; /* Make text uppercase */
+	letter-spacing: 1px; /* Add letter spacing */
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.25); /* Add box shadow */
+  }
+  
+  .try-it-button:hover {
+	background: linear-gradient(to bottom, #4a0080, #8a2be2);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Add larger box shadow on hover */
+  }
+  
+
